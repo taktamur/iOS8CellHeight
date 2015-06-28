@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyTableViewCell.h
 //  CellHeight
 //
 //  Created by 田村孝文 on 2015/06/28.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MyTableViewCell : UITableViewCell
 
 @end
-
