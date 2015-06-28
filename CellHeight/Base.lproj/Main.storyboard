@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Table View Controller-->
@@ -14,19 +15,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="un4-c6-brD" style="IBUITableViewCellStyleDefault" id="lRr-Fd-OQ6" customClass="MyTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="lRr-Fd-OQ6" customClass="MyTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRr-Fd-OQ6" id="agq-HD-xBe">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="43.5" tableViewCell="lRr-Fd-OQ6" id="agq-HD-xBe">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="un4-c6-brD">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMz-DG-Olx">
+                                            <rect key="frame" x="18" y="18" width="284" height="23.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oMz-DG-Olx" secondAttribute="trailing" constant="10" id="IQt-hF-lsA"/>
+                                        <constraint firstItem="oMz-DG-Olx" firstAttribute="leading" secondItem="agq-HD-xBe" secondAttribute="leadingMargin" constant="10" id="hcj-en-1Ag"/>
+                                        <constraint firstItem="oMz-DG-Olx" firstAttribute="top" secondItem="agq-HD-xBe" secondAttribute="topMargin" priority="999" constant="10" id="kYa-u4-26G"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oMz-DG-Olx" secondAttribute="bottom" constant="10" id="wG6-Vd-GvY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="title" destination="oMz-DG-Olx" id="kOy-Y7-wTy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
